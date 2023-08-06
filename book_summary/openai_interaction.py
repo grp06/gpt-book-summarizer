@@ -21,7 +21,7 @@ async def chat_completion(messages):
         response = await openai_async.chat_complete(
             api_key,
             timeout=60,
-            payload={"model": gpt4, "messages": messages, "temperature": 1},
+            payload={"model": gpt3, "messages": messages, "temperature": 1},
         )
     except httpx.ReadTimeout:
         print("Request to OpenAI timed out. Retrying...")
